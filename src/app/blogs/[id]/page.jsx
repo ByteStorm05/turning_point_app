@@ -69,8 +69,8 @@ const BlogPost = () => {
             <h1 class="text-3xl font-semibold text-gray-800 dark:text-white lg:text-4xl">{blog.title}</h1>
                     </div>
 
-        <div class="flex justify-center mt-10">
-            <img class="object-contain w-full h-96 rounded-xl lg:w-4/5" src={blog.imageUrl} />
+        <div class="flex justify-center mt-10 rounded-lg">
+            <img class="object-cover w-8/12 h-96 rounded-xl lg:w-4/5" src={blog.imageUrl} />
         </div>
 
         <div class="max-w-lg mx-auto">
