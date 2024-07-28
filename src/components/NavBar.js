@@ -14,7 +14,7 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
       <button
                 onClick={toggleDarkMode}
                 className={`p-2 rounded-full flex items-center justify-center transition-colors duration-200 ${
-                  darkMode ? 'bg-gray-800 text-white' : 'bg-gray-200 text-gray-800'
+                  darkMode ? ' text-white' : ' text-gray-800'
                 }`}
                 aria-label="Toggle theme"
               >
@@ -25,7 +25,7 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
                 )}
         </button>
         <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-          <img src="https://flowbite.com/docs/images/logo.svg" className="h-8" alt="Logo" />
+          <img src="/images/logo.png" className="h-20" alt="Logo" />
           <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Turning Point</span>
         </Link>
         </div>
@@ -55,19 +55,53 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
                 onClick={() => setDropdownOpen((prev) => !prev)} 
                 className="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
               >
-                Dropdown 
+                Follow Us!
                 <svg className="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                   <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4"/>
                 </svg>
               </button>
               <div className={`z-10 ${isDropdownOpen ? 'block' : 'hidden'} font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600`}>
-                <ul className="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
-                  <li><a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a></li>
-                  <li><a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a></li>
-                  <li><a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a></li>
-                </ul>
+              <ul className="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+      <li>
+        <Link href="https://www.youtube.com/channel/UCC4d2qxcdA57WUSQRuqCXrg" passHref>
+          <div className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">YouTube</div>
+        </Link>
+      </li>
+      <li>
+        <Link href="https://www.instagram.com/turning.point.institute/" passHref>
+          <div className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Instagram</div>
+        </Link>
+      </li>
+      <li>
+        <Link href="https://www.facebook.com/pg/india.turningpointinstitute" passHref>
+          <div className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Facebook</div>
+        </Link>
+      </li>
+      <li>
+        <Link href="https://twitter.com/turningpoint_in" passHref>
+          <div className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Twitter</div>
+        </Link>
+      </li>
+      <li>
+        <Link href="https://www.linkedin.com/in/turning-point-institute/" passHref>
+          <div className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">LinkedIn</div>
+        </Link>
+      </li>
+      <li>
+        <Link href="https://www.slideshare.net/slideshow/turning-point-institute-iit-jee-pmt-coaching-classes-delhi/96623642" passHref>
+          <div className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">SlideShare</div>
+        </Link>
+      </li>
+      
+      <li>
+        <Link href="https://www.pinterest.co.uk/turningpointinstitute/" passHref>
+          <div className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Pinterest</div>
+        </Link>
+      </li>
+      
+    </ul>
                 <div className="py-1">
-                  <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign out</a>
+                  <div href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign out</div>
                 </div>
               </div>
             </li>
